@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+{% endblock %}
+{% block body %}
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container" id="form_container">
+    <br><br>
+    <h1 class="header center orange-text">Two Objects Solution</h1>
+    <div class="row center">
+      <h5 class="header col s12 light">Enter the coordinates of your two objects to see the description of the road section which include the two objects. You can enter multiple couples of objects to see the description of the section for each. You
+        can also upload a csv file with all of your objects coordinates in it.</h5>
+    </div>
+    <div class="row">
+      <a class="btn-floating btn-large waves-effect waves-light red" id='add_button'><i class="material-icons">add</i></a>
+    </div>
+    <form method='POST' id="inputForms" action="{{ url_for('multi_form') }}">
+      <div class="row" id="get_solution_data1">
+        <div class="input-field col s6" id="1latitude1">
+          <input name="1latitude1" type="text" class="validate">
+          <label class="active" for="latitude">Latitude 1</label>
+        </div>
+        <div class="input-field col s6" id="1longitude1">
+          <input name='1longitude1' type="text" class="validate">
+          <label class="active" for="longitude">Longitude 1</label>
+        </div>
+        <div class="input-field col s6" id="2latitude1">
+          <input name="2latitude1" type="text" class="validate">
+          <label class="active" for="latitude">Latitude 2</label>
+        </div>
+        <div class="input-field col s6" id="2longitude1">
+          <input name='2longitude1' type="text" class="validate">
+          <label class="active" for="longitude">Longitude 2</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit">submit <i class="material-icons right">send</i></button>
+    </form>
+    <br><br>
+
+  </div>
+  <div id="buttons">
+    <form method=post enctype=multipart/form-data action="{{ url_for('multi_csv') }}">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>CSV File</span>
+          <input type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit">submit <i class="material-icons right">send</i></button>
+    </form>
+  </div>
+
+  {% endblock %}
+  {% block footer %}
+  <script>
+    $('#add_button').click(function(){
+
+
+    // get the last DIV which ID starts with ^= "klon"
+    var $div = $('div[id^="get_solution_data"]:last');
+
+    // Read the Number from that DIV's ID (i.e: 3 from "klon3")
+    // And increment that number by 1
+    var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+
+    // Clone it and assign the new ID (i.e: from num 4 to ID "klon4")
+    var $klon = $div.clone().prop('id', 'get_solution_data'+num );
+    $latitude1 = $klon.children('div[id^="1latitude"]')
+    $latitude1.attr('id', '1latitude'+num );
+    $longitude1 = $klon.children('div[id^="1longitude"]')
+    $longitude1.attr('id', '1longitude'+num );
+    $latitude1.children('input').attr('name', '1latitude'+num );
+    $longitude1.children('input').attr('name', '1longitude'+num );
+    $latitude2 = $klon.children('div[id^="2latitude"]')
+    $latitude2.attr('id', '2latitude'+num );
+    $longitude2 = $klon.children('div[id^="2longitude"]')
+    $longitude2.attr('id', '2longitude'+num );
+    $latitude2.children('input').attr('name', '2latitude'+num );
+    $longitude2.children('input').attr('name', '2longitude'+num );
+
+    // Finally insert $klon wherever you want
+    $div.after( $klon );
+
+    });
+  </script>
+  {% endblock %}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_788ed118508f4ba3b7840c62aeff2d3d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_788ed118508f4ba3b7840c62aeff2d3d" ></div>
+        
+</body>
+<script>    
+    
+            var map_788ed118508f4ba3b7840c62aeff2d3d = L.map(
+                "map_788ed118508f4ba3b7840c62aeff2d3d",
+                {
+                    center: [48.896205, 2.260466],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_79b0d759c0d649a5852aff7bfea1461e = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_788ed118508f4ba3b7840c62aeff2d3d);
+        
+    
+            var marker_a9aecb6254164f74987a590af93b6135 = L.marker(
+                [48.884018, 2.200086],
+                {}
+            ).addTo(map_788ed118508f4ba3b7840c62aeff2d3d);
+        
+    
+            var icon_463eac8042b148558959e10f13e7928b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a9aecb6254164f74987a590af93b6135.setIcon(icon_463eac8042b148558959e10f13e7928b);
+        
+    
+        var popup_12676c6bfea748ef9718b6fa4b0e7ee4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fb0c3f6cd024761a24a60c1b37a1efc = $(`<div id="html_5fb0c3f6cd024761a24a60c1b37a1efc" style="width: 100.0%; height: 100.0%;">Custom Marker 1</div>`)[0];
+            popup_12676c6bfea748ef9718b6fa4b0e7ee4.setContent(html_5fb0c3f6cd024761a24a60c1b37a1efc);
+        
+
+        marker_a9aecb6254164f74987a590af93b6135.bindPopup(popup_12676c6bfea748ef9718b6fa4b0e7ee4)
+        ;
+
+        
+    
+    
+            marker_a9aecb6254164f74987a590af93b6135.bindTooltip(
+                `<div>
+                     <strong>Point d'interet (48.884018, 2.200086) </strong>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_62bd870ebfc8454ca2622cde31a077dd = L.featureGroup(
+                {}
+            ).addTo(map_788ed118508f4ba3b7840c62aeff2d3d);
+        
+    
+            var poly_line_6f93636d0128433688e10d4336f301e1 = L.polyline(
+                [[48.8834808, 2.198008], [48.8838476, 2.1989478], [48.884336, 2.2001266]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 10}
+            ).addTo(feature_group_62bd870ebfc8454ca2622cde31a077dd);
+        
+    
+        var popup_87317d77c8764e4e9f73e2ec3ec94fb4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_199d7daa9fb540dbb807018f2d21f780 = $(`<div id="html_199d7daa9fb540dbb807018f2d21f780" style="width: 100.0%; height: 100.0%;"><b>Tronçon Point (48.884018, 2.200086)</b></div>`)[0];
+            popup_87317d77c8764e4e9f73e2ec3ec94fb4.setContent(html_199d7daa9fb540dbb807018f2d21f780);
+        
+
+        poly_line_6f93636d0128433688e10d4336f301e1.bindPopup(popup_87317d77c8764e4e9f73e2ec3ec94fb4)
+        ;
+
+        
+    
+    
+            poly_line_6f93636d0128433688e10d4336f301e1.bindTooltip(
+                `<div>
+                     Tronçon Point (48.884018, 2.200086)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_4e473fd0251248a2afcc4fa47444b65f = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_79b0d759c0d649a5852aff7bfea1461e,
+                },
+                overlays :  {
+                    "Tron\u00e7on Point (48.884018, 2.200086)" : feature_group_62bd870ebfc8454ca2622cde31a077dd,
+                },
+            };
+            L.control.layers(
+                layer_control_4e473fd0251248a2afcc4fa47444b65f.base_layers,
+                layer_control_4e473fd0251248a2afcc4fa47444b65f.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_788ed118508f4ba3b7840c62aeff2d3d);
+        
+</script>

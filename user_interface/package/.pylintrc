@@ -1,0 +1,19 @@
+[GENERAL]
+persistent=yes
+jobs=0
+disable=C0330,R0801,W1201,W1203,E0402,E0401
+
+[MESSAGES CONTROL]
+
+# Only show warnings with the listed confidence levels. Leave empty to show
+# all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED.
+confidence=
+[FORMAT]
+
+good-names=p1,p2,p3,logger,ch,data
+
+[REFACTORING]
+min-similarity-lines=5
+ignore-docstrings=yes
+ignore-comments=yes
+ignore-imports=yes

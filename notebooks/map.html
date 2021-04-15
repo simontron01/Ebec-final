@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a7553049d17d4adaa5394b2f847b422a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_a7553049d17d4adaa5394b2f847b422a" ></div>
+        
+</body>
+<script>    
+    
+            var map_a7553049d17d4adaa5394b2f847b422a = L.map(
+                "map_a7553049d17d4adaa5394b2f847b422a",
+                {
+                    center: [48.896205, 2.260466],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3017f54224c1436dab0d90ca12555cda = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var marker_822c29c715534e89b92ba015a219830c = L.marker(
+                [48.897121406, 2.2479852324],
+                {}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var icon_3a2a6aaf090a4de681f6f8101748696c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_822c29c715534e89b92ba015a219830c.setIcon(icon_3a2a6aaf090a4de681f6f8101748696c);
+        
+    
+        var popup_44038860ca3542839fe2cf9be08edb79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e2f541118ca484d8424949d0955d8cd = $(`<div id="html_9e2f541118ca484d8424949d0955d8cd" style="width: 100.0%; height: 100.0%;">Custom Marker 1</div>`)[0];
+            popup_44038860ca3542839fe2cf9be08edb79.setContent(html_9e2f541118ca484d8424949d0955d8cd);
+        
+
+        marker_822c29c715534e89b92ba015a219830c.bindPopup(popup_44038860ca3542839fe2cf9be08edb79)
+        ;
+
+        
+    
+    
+            marker_822c29c715534e89b92ba015a219830c.bindTooltip(
+                `<div>
+                     <strong>Point d'intérêt (48.897121406,2.2479852324) </strong>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_bded40df072149dc9333e5760c42bfe4 = L.featureGroup(
+                {}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var poly_line_a37312b681b0442b91a69b1bcc6b3293 = L.polyline(
+                [[48.8966458, 2.2483905], [48.8965939, 2.2484364], [48.8962874, 2.2486831], [48.8960091, 2.248907], [48.8959409, 2.2489648]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 10}
+            ).addTo(feature_group_bded40df072149dc9333e5760c42bfe4);
+        
+    
+        var popup_1ae0251b6882423f8d7f27866cae55d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07ef32eff5244ad68de35febdd16abfa = $(`<div id="html_07ef32eff5244ad68de35febdd16abfa" style="width: 100.0%; height: 100.0%;"><b>Tronçon Point (48.897121406,2.2479852324)</b></div>`)[0];
+            popup_1ae0251b6882423f8d7f27866cae55d1.setContent(html_07ef32eff5244ad68de35febdd16abfa);
+        
+
+        poly_line_a37312b681b0442b91a69b1bcc6b3293.bindPopup(popup_1ae0251b6882423f8d7f27866cae55d1)
+        ;
+
+        
+    
+    
+            poly_line_a37312b681b0442b91a69b1bcc6b3293.bindTooltip(
+                `<div>
+                     Tronçon Point (48.897121406,2.2479852324)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6b20564e727d4c58b386f7d0ed6d603d = L.marker(
+                [48.894514, 2.245865],
+                {}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var icon_0a4f1fc3b4bd4a899b0c86d0ee124efd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6b20564e727d4c58b386f7d0ed6d603d.setIcon(icon_0a4f1fc3b4bd4a899b0c86d0ee124efd);
+        
+    
+        var popup_d51d9cff69b94c0392bcbf5f53216fe0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af09991d4842438aaad3245809c2facf = $(`<div id="html_af09991d4842438aaad3245809c2facf" style="width: 100.0%; height: 100.0%;">Custom Marker 1</div>`)[0];
+            popup_d51d9cff69b94c0392bcbf5f53216fe0.setContent(html_af09991d4842438aaad3245809c2facf);
+        
+
+        marker_6b20564e727d4c58b386f7d0ed6d603d.bindPopup(popup_d51d9cff69b94c0392bcbf5f53216fe0)
+        ;
+
+        
+    
+    
+            marker_6b20564e727d4c58b386f7d0ed6d603d.bindTooltip(
+                `<div>
+                     <strong>Point d'intérêt (48.894514,2.245865) </strong>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_2d3312784d41419f93d6b8d99aecc379 = L.featureGroup(
+                {}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var poly_line_50ae48d355ef4992b75cdd323c95ca37 = L.polyline(
+                [[48.894755, 2.2455001], [48.8944427, 2.2459541], [48.8943894, 2.2460315], [48.8943549, 2.2460855], [48.8942326, 2.2462677], [48.8940065, 2.2466103]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 10}
+            ).addTo(feature_group_2d3312784d41419f93d6b8d99aecc379);
+        
+    
+        var popup_ab701c3107704d66bd07b01fc41b9b33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4bae388abf04d9088c01b8b7f4d9887 = $(`<div id="html_f4bae388abf04d9088c01b8b7f4d9887" style="width: 100.0%; height: 100.0%;"><b>Tronçon Point (48.894514,2.245865)</b></div>`)[0];
+            popup_ab701c3107704d66bd07b01fc41b9b33.setContent(html_f4bae388abf04d9088c01b8b7f4d9887);
+        
+
+        poly_line_50ae48d355ef4992b75cdd323c95ca37.bindPopup(popup_ab701c3107704d66bd07b01fc41b9b33)
+        ;
+
+        
+    
+    
+            poly_line_50ae48d355ef4992b75cdd323c95ca37.bindTooltip(
+                `<div>
+                     Tronçon Point (48.894514,2.245865)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec1725c6fdb64f8b9cefe55f6c970d70 = L.marker(
+                [48.779893, 2.298423],
+                {}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var icon_920b2031c4ed42328e0fdd2d95cf4ccd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "none", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ec1725c6fdb64f8b9cefe55f6c970d70.setIcon(icon_920b2031c4ed42328e0fdd2d95cf4ccd);
+        
+    
+        var popup_07859146d7794d51929d83332bfaa99f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a1fca9ecfee442981f029013f6fe683 = $(`<div id="html_1a1fca9ecfee442981f029013f6fe683" style="width: 100.0%; height: 100.0%;">Custom Marker 1</div>`)[0];
+            popup_07859146d7794d51929d83332bfaa99f.setContent(html_1a1fca9ecfee442981f029013f6fe683);
+        
+
+        marker_ec1725c6fdb64f8b9cefe55f6c970d70.bindPopup(popup_07859146d7794d51929d83332bfaa99f)
+        ;
+
+        
+    
+    
+            marker_ec1725c6fdb64f8b9cefe55f6c970d70.bindTooltip(
+                `<div>
+                     <strong>Point d'intérêt (48.779893,2.298423) </strong>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_d326a54c58d14880b039965395d16578 = L.featureGroup(
+                {}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+    
+            var poly_line_f32823d62bd94803bd84176eda5abd85 = L.polyline(
+                [[48.7795221, 2.2979073], [48.7798182, 2.2981974], [48.7799808, 2.2985407], [48.7800156, 2.2990101], [48.7799624, 2.2993774]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 10}
+            ).addTo(feature_group_d326a54c58d14880b039965395d16578);
+        
+    
+        var popup_2c62f836d6824caf908121b23bdb4616 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d22a53e33b3049fda5e37b8048179372 = $(`<div id="html_d22a53e33b3049fda5e37b8048179372" style="width: 100.0%; height: 100.0%;"><b>Tronçon Point (48.779893,2.298423)</b></div>`)[0];
+            popup_2c62f836d6824caf908121b23bdb4616.setContent(html_d22a53e33b3049fda5e37b8048179372);
+        
+
+        poly_line_f32823d62bd94803bd84176eda5abd85.bindPopup(popup_2c62f836d6824caf908121b23bdb4616)
+        ;
+
+        
+    
+    
+            poly_line_f32823d62bd94803bd84176eda5abd85.bindTooltip(
+                `<div>
+                     Tronçon Point (48.779893,2.298423)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_56cd0eda92bb40ad8f3208113c0c33c7 = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_3017f54224c1436dab0d90ca12555cda,
+                },
+                overlays :  {
+                    "Tron\u00e7on Point (48.897121406,2.2479852324)" : feature_group_bded40df072149dc9333e5760c42bfe4,
+                    "Tron\u00e7on Point (48.894514,2.245865)" : feature_group_2d3312784d41419f93d6b8d99aecc379,
+                    "Tron\u00e7on Point (48.779893,2.298423)" : feature_group_d326a54c58d14880b039965395d16578,
+                },
+            };
+            L.control.layers(
+                layer_control_56cd0eda92bb40ad8f3208113c0c33c7.base_layers,
+                layer_control_56cd0eda92bb40ad8f3208113c0c33c7.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_a7553049d17d4adaa5394b2f847b422a);
+        
+</script>

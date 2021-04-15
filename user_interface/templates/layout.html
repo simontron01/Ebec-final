@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>ETS Home</title>
+
+  <!-- CSS  -->
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Epsilon Technical Solutions</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://www.universite-paris-saclay.fr/evenements/ebec-paris-saclay-2021?fbclid=IwAR1t4TRu-wFWvwpfpnwWrAJBL9jj3RT40-Ore_pWiUde9Bmd_e0W6an0wlU">EBEC Paris Saclay</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://www.centralesupelec.fr">CentraleSupelec</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="section">
+
+    </div>
+  </div>
+  {% block body %}{% endblock %}
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">The Team</h5>
+          <p class="grey-text text-lighten-4">Epsilon Technical Solutions is a team of four CentraleSupélec students for the Hackaton EBEC Paris Saclay 2021. They are all second year students and you can find us by clicking on the links. Arnaud and Simon were finalist of the Hackaton Symbioticon 2020. </p>
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Our Linkedin links</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.linkedin.com/in/simon-tronchi/">Simon Tronchi</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/arnaud39/">Arnaud Petit</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/matthieu-annequin/">Matthieu Annequin</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/hicham-bouanani-7464b9195/">Hicham Bouanani</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <a class="white-text" href="https://github.com/Bouananhich/Ebec-Paris-Saclay">
+            <h5>Our GitHub</h5>
+          </a>
+          <ul>
+            <li><a class="waves-effect waves-light btn-small" href="https://github.com/Bouananhich/Ebec-Paris-Saclay">GitHub <i class="fa fa-github"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by Epsilon Technical Solutions
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  {% block footer %}{% endblock %}
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+
+</body>
+
+</html>
